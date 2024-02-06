@@ -1,0 +1,14 @@
+{
+  "name": "exer3",
+  "version": "1.0.0",
+  "description": "In this exercise, bootcampers will familiarize themselves with flexbox, padding, and margins.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

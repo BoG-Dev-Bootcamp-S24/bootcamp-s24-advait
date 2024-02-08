@@ -8,9 +8,10 @@
 </head>
 <body class="bg-gray-100 font-sans antialiased">
 
+    
     <nav class="bg-white shadow-md py-4 px-6 fixed top-0 w-full z-10">
       <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold text-gray-800"><img style="height: 40px; padding: 0px;" src="./img/google.png"></a>
+        <a href="#" class="text-2xl font-bold text-gray-800"><img style="height: 50px; padding: 0px;" src="./img/google_icon.webp"></a>
       
         <ul class="flex items-center">
           <li><a href="#" class="px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-700">Home</a></li>
@@ -20,11 +21,18 @@
       </div>
     </nav>
   
-    <main class="container mt-16 mx-auto">       
-      <h1 class="text-3xl font-bold mb-4">Your Page Content</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus sapien eu neque sagittis, ut ullamcorper lectus condimentum.</p>
+    <main style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <div style="text-align: center;">
+          <img style="height: 150px; padding-bottom: 5px; display: inline-block;" src="./img/google_logo.png">
+      </div>
+      <div>
+          <input type="text" id="name" name="name" placeholder="Search..." style="background-color: rgb(8, 8, 8); height: 70px; width: 600px; color: rgb(192, 192, 192); border-radius: 10px; padding-left: 10px; font-size: 20px;" />
+          <button type="button" style="height: 70px; width: 100px; border-radius: 10px; background-color: blue; color: white; padding: 0px 10px; font-size: 20px">Enter</button>
+      </div>
     </main>
   
+  
+
     <footer class="bg-gray-800 text-white py-4 px-6 fixed bottom-0 w-full">
       <div class="container mx-auto flex items-center justify-between">
         <p class="text-sm">Copyright &copy; 2024 Advait Sepuri</p>

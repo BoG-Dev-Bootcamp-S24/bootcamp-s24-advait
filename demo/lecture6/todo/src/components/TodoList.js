@@ -25,6 +25,8 @@ function TodoList() {
     <div className="todo-list">
       <input
         type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
         // value={/* Hint 6: Bind this input to the task state variable */}
         // onChange={/* Hint 7: Update the task state variable as the input changes */}
         placeholder="Add new task"

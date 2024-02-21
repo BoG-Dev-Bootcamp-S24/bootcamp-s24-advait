@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import PokemonSprite from './components/Display';
 
 const URL = "https://pokeapi.co/api/v2/pokemon";
 
@@ -53,26 +54,24 @@ function App() {
       <div className="header flex-box">
         <h1 className="pl-90 text-3xl font-bold">Exercise 5: PokeDex</h1>
       </div>
-      <div className="flex mb-4">
-        <div className="w-1/2 bg-gray-400 h-60">
-          <div className="top-0 left-0 w-full h-20 bg-red-300"></div>
+      <div className="flex mb-8">
+        <div className="w-1/2 bg-gray-400 h-72">
+          <div className="top-0 left-0 w-full h-30 bg-red-300">
+            <PokemonSprite pokemonJSON={pokemonJSON} />
+          </div>
           <div className="top-4 left-0 w-full h-20 bg-green-300"></div>
-          <div className="top-8 left-0 w-full h-20 bg-white flex justify-center">
-            <button onClick={decrementPokemon} className="bg-gray-200 text-black px-4 py-1 rounded-md font-semibold hover:bg-gray-500 focus:ring-4 focus:ring-green-400 focus:outline-none transition-colors duration-300">
+          <div className="top-8 left-0 w-full h-10 bg-white flex justify-center">
+            <button onClick={decrementPokemon} className="bg-gray-200 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-500">
               &lt;
             </button>
-            <button onClick={incrementPokemon} className="bg-gray-200 text-black px-4 py-1 rounded-md font-semibold hover:bg-gray-500 focus:ring-4 focus:ring-green-400 focus:outline-none transition-colors duration-300">
+            <p className="w-2"></p>
+            <button onClick={incrementPokemon} className="bg-gray-200 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-500">
               &gt;
             </button>
           </div>
         </div>
-        <div className="w-1/2 bg-gray-500 h-60">
-          {pokemonJSON && (
-            <div>
-              <h2>{pokemonJSON.name}</h2>
-              <img src={pokemonJSON.sprites.front_default} alt={pokemonJSON.name} />
-            </div>
-          )}
+        <div className="w-1/2 bg-gray-500 h-72">
+        
         </div>
       </div>
     </div>

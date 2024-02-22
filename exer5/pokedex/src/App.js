@@ -59,7 +59,9 @@ function App() {
           <div class="mb-4 h-1/4">
             <PokemonSprite pokemonJSON={pokemonJSON} />
           </div>
-          <div class="mb-4 h-1/4">Container 2</div>
+          <div class="mb-4 h-1/4">
+            <p>{pokemonJSON.name}</p>
+          </div>
           <div class="h-1/4">
             <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
               &lt;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import PokemonSprite from './components/PokemonSprite';
+import PokemonTypes from './components/PokemonTypes';
 
 const URL = "https://pokeapi.co/api/v2/pokemon";
 
@@ -60,7 +61,7 @@ function App() {
             <PokemonSprite pokemonJSON={pokemonJSON} />
           </div>
           <div class="mb-4 h-1/4">
-            <p>{pokemonJSON.name}</p>
+            {pokemonJSON && <PokemonTypes types={pokemonJSON.types} />}
           </div>
           <div class="h-1/4">
             <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
@@ -73,7 +74,14 @@ function App() {
         </div>
         <div class="w-1/2 h-screen flex flex-col">
           <div class="mb-4 h-1/2">Container 1</div>
-          <div class="h-1/2">Container 2</div>
+          <div class="h-1/2">
+            <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
+              &lt;
+            </button>
+            <button onClick={incrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
+              &gt;
+            </button>
+          </div>
         </div>
       </div>
     </div>

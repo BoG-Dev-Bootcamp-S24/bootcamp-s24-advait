@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import PokemonSprite from './components/Display';
+import PokemonSprite from './components/PokemonSprite';
 
 const URL = "https://pokeapi.co/api/v2/pokemon";
 
@@ -51,27 +51,27 @@ function App() {
 
   return (
     <div>
-      <div className="header flex-box">
-        <h1 className="pl-90 text-3xl font-bold">Exercise 5: PokeDex</h1>
+      <div className="header">
+        <h1 className="pl-90 text-3xl font-bold mb-5">Exercise 5: PokeDex</h1>
       </div>
-      <div className="flex mb-8">
-        <div className="w-1/2 bg-gray-400 h-72">
-          <div className="top-0 left-0 w-full h-30 bg-red-300">
+      <div class="flex">
+        <div class="w-1/2 mr-4 h-screen flex flex-col">
+          <div class="mb-4 h-1/4">
             <PokemonSprite pokemonJSON={pokemonJSON} />
           </div>
-          <div className="top-4 left-0 w-full h-20 bg-green-300"></div>
-          <div className="top-8 left-0 w-full h-10 bg-white flex justify-center">
-            <button onClick={decrementPokemon} className="bg-gray-200 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-500">
+          <div class="mb-4 h-1/4">Container 2</div>
+          <div class="h-1/4">
+            <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
               &lt;
             </button>
-            <p className="w-2"></p>
-            <button onClick={incrementPokemon} className="bg-gray-200 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-500">
+            <button onClick={incrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
               &gt;
             </button>
           </div>
         </div>
-        <div className="w-1/2 bg-gray-500 h-72">
-        
+        <div class="w-1/2 h-screen flex flex-col">
+          <div class="mb-4 h-1/2">Container 1</div>
+          <div class="h-1/2">Container 2</div>
         </div>
       </div>
     </div>

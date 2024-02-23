@@ -58,13 +58,13 @@ function App() {
       </div>
       <div class="flex">
         <div class="w-1/2 mr-4 h-screen flex flex-col">
-          <div class="mb-4 h-1/4">
+          <div class="mb-4 h-1/3">
             <PokemonSprite pokemonJSON={pokemonJSON} />
           </div>
-          <div class="mb-4 h-1/4">
+          <div class="mb-4 h-1/3">
             {pokemonJSON && <PokemonTypes types={pokemonJSON.types} />}
           </div>
-          <div class="h-1/4">
+          <div class="h-1/3">
             <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
               &lt;
             </button>

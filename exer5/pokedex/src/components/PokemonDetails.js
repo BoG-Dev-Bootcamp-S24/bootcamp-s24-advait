@@ -12,17 +12,20 @@ const PokemonDetails = ({ height, weight, stats, moves }) => {
     <div>
       <div class="flex justify-center">
         {displayStats ? (
-          <div>
-            <p class="font-bold">Info</p>
-            <ul>
-                <li>height: {height}m</li>
-                <li>weight: {weight}kg</li>
-                {stats.map((stat, index) => (
-                    <li key={index}>
-                    {stat.stat.name}: {stat.base_stat}
-                    </li>
-                ))}
-            </ul>
+          <div class="flex flex-col justify-center items-center mb-3">
+            <h3 class="font-bold">Info</h3>
+            <div className="borde border-solid items-center bg-neutral-300 mr-3 pl-1 pt-1" style={{ width: '250px', height: '350px'}}>
+              
+              <ul>
+                  <li>height: {height}m</li>
+                  <li>weight: {weight}kg</li>
+                  {stats.map((stat, index) => (
+                      <li key={index}>
+                      {stat.stat.name}: {stat.base_stat}
+                      </li>
+                  ))}
+              </ul>
+            </div>
           </div>
         ) : (
           <div>

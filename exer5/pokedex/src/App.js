@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import PokemonSprite from './components/PokemonSprite';
 import PokemonTypes from './components/PokemonTypes';
+import PokemonDetails from './components/PokemonDetails';
 
 const URL = "https://pokeapi.co/api/v2/pokemon";
 
@@ -73,7 +74,12 @@ function App() {
           </div>
         </div>
         <div class="w-1/2 h-screen flex flex-col">
-          <div class="mb-4 h-1/2">Container 1</div>
+          <div class="mb-4 h-1/2">
+            <div className="mb-4 h-1/4">
+              {/* Display Pokemon details using PokemonDetails component */}
+              {pokemonJSON && <PokemonDetails height={pokemonJSON.height} weight={pokemonJSON.weight} stats={pokemonJSON.stats} moves={pokemonJSON.moves} />}
+            </div>
+          </div>
           <div class="h-1/2">
             <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
               &lt;

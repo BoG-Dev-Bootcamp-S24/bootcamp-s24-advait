@@ -79,17 +79,10 @@ function App() {
         <div class="w-1/2 h-screen flex flex-col">
           <div class="mb-4 h-1/2">
             <div className="mb-4 h-1/4">
-              {/* Display Pokemon details using PokemonDetails component */}
               {pokemonJSON && <PokemonDetails height={pokemonJSON.height} weight={pokemonJSON.weight} stats={pokemonJSON.stats} moves={pokemonJSON.moves} />}
             </div>
           </div>
           <div class="h-1/2">
-            <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
-              &lt;
-            </button>
-            <button onClick={incrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
-              &gt;
-            </button>
           </div>
         </div>
       </div>

@@ -36,8 +36,20 @@ const PokemonDetails = ({ height, weight, stats, moves }) => {
         )}
       </div>
       <div class="flex justify-center">
-        <button onClick={toggleDisplay}>Info</button>
-        <button onClick={toggleDisplay}>Moves</button>
+        <button 
+          onClick={toggleDisplay} 
+          className="border border-solid flex justify-center items-center font-medium rounded bg-neutral-300 mr-3" 
+          style={{ width: '70px', height: '30px'}}
+        >
+          Info
+        </button>
+        <button 
+          onClick={toggleDisplay} 
+          className="border border-solid flex justify-center items-center font-medium rounded bg-green-500 mr-3" 
+          style={{ width: '70px', height: '30px'}}
+        >
+          Moves
+        </button>
       </div>
     </div>
   );

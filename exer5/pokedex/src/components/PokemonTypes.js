@@ -42,7 +42,7 @@ const PokemonTypes = ({ types }) => {
   }
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mb-3">
       <h2 className="font-bold mb-1">Types:</h2>
       <div className="flex">
         {types.map((type, index) => (

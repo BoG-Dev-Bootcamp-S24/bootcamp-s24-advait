@@ -61,16 +61,19 @@ function App() {
           <div class="mb-4 h-1/3">
             <PokemonSprite pokemonJSON={pokemonJSON} />
           </div>
-          <div class="mb-4 h-1/3">
+          <div class="mb-4 h-1/3 flex flex-col items-center">
             {pokemonJSON && <PokemonTypes types={pokemonJSON.types} />}
+            <div>
+              <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl mr-2">
+                &lt;
+              </button>
+              <button onClick={incrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
+                &gt;
+              </button>
+            </div>
           </div>
-          <div class="h-1/3">
-            <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
-              &lt;
-            </button>
-            <button onClick={incrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl">
-              &gt;
-            </button>
+          <div class="" style={{height: '50px'}}>
+            
           </div>
         </div>
         <div class="w-1/2 h-screen flex flex-col">

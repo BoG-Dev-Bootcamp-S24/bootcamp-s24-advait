@@ -57,11 +57,11 @@ function App() {
         <h1 className="pl-90 text-3xl font-bold mb-5">Exercise 5: PokeDex</h1>
       </div>
       <div class="flex">
-        <div class="w-1/2 mr-4 h-screen flex flex-col">
+        <div class="w-1/2 mr-4 h-screen flex flex-col" style={{paddingLeft: '500px'}}>
           <div class="mb-4 h-1/3">
             <PokemonSprite pokemonJSON={pokemonJSON} />
           </div>
-          <div class="mb-4 h-1/3 flex flex-col items-center">
+          <div class="mb-4 h-1/10 flex flex-col items-center">
             {pokemonJSON && <PokemonTypes types={pokemonJSON.types} />}
             <div>
               <button onClick={decrementPokemon} className="bg-gray-100 text-black px-7 py-1 rounded-md font-semibold hover:bg-gray-300 text-xl mr-2">
@@ -72,17 +72,12 @@ function App() {
               </button>
             </div>
           </div>
-          <div class="" style={{height: '50px'}}>
-            
-          </div>
         </div>
-        <div class="w-1/2 h-screen flex flex-col">
+        <div class="w-1/2 h-screen flex flex-col" style={{paddingRight: '500px'}}>
           <div class="mb-4 h-1/2">
             <div className="mb-4 h-1/4">
               {pokemonJSON && <PokemonDetails height={pokemonJSON.height} weight={pokemonJSON.weight} stats={pokemonJSON.stats} moves={pokemonJSON.moves} />}
             </div>
-          </div>
-          <div class="h-1/2">
           </div>
         </div>
       </div>

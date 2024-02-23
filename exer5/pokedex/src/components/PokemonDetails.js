@@ -10,14 +10,10 @@ const PokemonDetails = ({ height, weight, stats, moves }) => {
 
   return (
     <div>
-      <div>
-        <button onClick={toggleDisplay}>Info</button>
-        <button onClick={toggleDisplay}>Moves</button>
-      </div>
-      <div>
+      <div class="flex justify-center">
         {displayStats ? (
           <div>
-            {/* Display Pokemon info */}
+            <p class="font-bold">Info</p>
             <ul>
                 <li>height: {height}m</li>
                 <li>weight: {weight}kg</li>
@@ -30,7 +26,7 @@ const PokemonDetails = ({ height, weight, stats, moves }) => {
           </div>
         ) : (
           <div>
-            {/* Display Pokemon moves */}
+            <p class="font-bold">Moves</p>
             <ul>
               {moves.map((move, index) => (
                 <li key={index}>{move.move.name}</li>
@@ -38,6 +34,10 @@ const PokemonDetails = ({ height, weight, stats, moves }) => {
             </ul>
           </div>
         )}
+      </div>
+      <div class="flex justify-center">
+        <button onClick={toggleDisplay}>Info</button>
+        <button onClick={toggleDisplay}>Moves</button>
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-// PokemonDetails.js
 import React, { useState } from 'react';
 
 const PokemonDetails = ({ height, weight, stats, moves }) => {
@@ -14,8 +13,7 @@ const PokemonDetails = ({ height, weight, stats, moves }) => {
         {displayStats ? (
           <div class="flex flex-col justify-center items-center mb-3">
             <h3 class="font-bold">Info</h3>
-            <div className="borde border-solid items-center bg-neutral-300 mr-3 pl-1 pt-1" style={{ width: '250px', height: '350px'}}>
-              
+            <div className="items-center bg-neutral-300 mr-3 pl-1 pt-1" style={{ width: '250px', height: '350px'}}>
               <ul>
                   <li>height: {height}m</li>
                   <li>weight: {weight}kg</li>
@@ -28,13 +26,15 @@ const PokemonDetails = ({ height, weight, stats, moves }) => {
             </div>
           </div>
         ) : (
-          <div>
-            <p class="font-bold">Moves</p>
-            <ul>
-              {moves.map((move, index) => (
-                <li key={index}>{move.move.name}</li>
-              ))}
-            </ul>
+          <div class="flex flex-col justify-center items-center mb-3">
+            <h3 class="font-bold">Moves</h3>
+            <div className="items-center bg-neutral-300 mr-3 pl-1 pt-1" style={{ width: '250px', height: '350px', overflow: 'auto'}}>
+              <ul>
+                {moves.map((move, index) => (
+                  <li key={index}>{move.move.name}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         )}
       </div>
